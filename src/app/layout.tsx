@@ -15,7 +15,7 @@ export function generateMetadata(): Metadata {
   return {
     title: "REST Countries API",
     description: "API REST Countries com alternador de tema de cores",
-    metadataBase: new URL("https://app-countries-copia-2.vercel.app/"), // Use o domínio correto aqui
+    metadataBase: new URL("https://app-countries-tau.vercel.app/"), // Use o domínio correto aqui
     authors: [{ name: "João Bacalhau", url: "https://www.linkedin.com/in/joaobacalhau/" }],
   };
 }
