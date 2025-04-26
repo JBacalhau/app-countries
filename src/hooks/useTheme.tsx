@@ -1,8 +1,8 @@
-// src/hooks/useTheme.tsx
+
 
 'use client';
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { ThemeContextProps } from '@/types/themeContext'; // Importando a tipagem
+import { ThemeContextProps } from '@/types/themeContext'; 
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Verifica tema inicial do sistema ou localStorage
+        
         const storedTheme = localStorage.getItem("theme");
         const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -23,7 +23,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
             document.documentElement.classList.toggle("dark", systemPrefersDark);
         }
 
-        // Listener para detectar alterações no tema do sistema
+        
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
         const handleChange = (event: MediaQueryListEvent) => {
             setIsDarkMode(event.matches);

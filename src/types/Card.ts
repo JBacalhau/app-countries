@@ -1,6 +1,6 @@
 // types/Card.ts
 
-// Definição do tipo para os dados do país
+
 export interface CountryData {
     name: {
         common: string;
@@ -14,17 +14,17 @@ export interface CountryData {
     tld?: string[];
     currencies?: { [key: string]: { name: string; symbol?: string } };
     languages?: { [key: string]: string };
-    cca2: string; // Código de duas letras do país
-    cca3: string; // Código de três letras do país
+    cca2: string; 
+    cca3: string; 
 }
 
-// Tipo para os dados dos países de fronteira
+
 export interface BorderCountry {
-    code: string; // Código do país de fronteira
-    name: string; // Nome do país de fronteira
+    code: string; 
+    name: string; 
 }
 
 export interface CardProps {
-    searchTerm: string; // Adicionando searchTerm
-    resetFilters: () => void;  // Tipando a função resetFilters
+    searchTerm: string; 
+    resetFilters: () => void; 
 }

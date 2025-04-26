@@ -29,7 +29,7 @@ export default function Cards({ searchTerm, filterRegion }: CardsProps) {
         throw new Error("Falha ao carregar dados da API");
       }
   
-      const data: Country[] = await response.json(); // Corrigindo a tipagem aqui
+      const data: Country[] = await response.json(); 
       setCountries(data);
     } catch (error) {
       console.error("Erro:", error);

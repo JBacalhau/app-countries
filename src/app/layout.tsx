@@ -3,19 +3,19 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/useTheme";
 
-// Fonte
+
 const mainFontFamily = Nunito_Sans({
-  weight: ["300", "400", "600", "800"], // Adicione todos os pesos usados
-  subsets: ["latin"], // Certifique-se de que o subset está correto
-  display: "swap", // Opção recomendada para evitar problemas de carregamento
+  weight: ["300", "400", "600", "800"], 
+  subsets: ["latin"], 
+  display: "swap", 
 });
 
-// Função para gerar metadados
+
 export function generateMetadata(): Metadata {
   return {
     title: "REST Countries API",
     description: "API REST Countries com alternador de tema de cores",
-    metadataBase: new URL("https://app-countries-tau.vercel.app/"), // Use o domínio correto aqui
+    metadataBase: new URL("https://app-countries-tau.vercel.app/"),
     authors: [{ name: "João Bacalhau", url: "https://www.linkedin.com/in/joaobacalhau/" }],
   };
 }
@@ -34,7 +34,7 @@ export default function RootLayout({
         <meta property="og:image:height" content="<generated>" />
       </head>
       <body className={mainFontFamily.className}>
-        <ThemeProvider> {/* Envolva a árvore de componentes com ThemeProvider */}
+        <ThemeProvider>
           {children}
         </ThemeProvider>
       </body>

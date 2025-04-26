@@ -7,9 +7,9 @@ import Card from "@/components/card/Card";
 const PaginaPais: FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  // Função para resetar o filtro de busca
+  
   const resetFilters = (): void => {
-    setSearchTerm("");  // Reseta o termo de busca
+    setSearchTerm(""); 
   };
 
   return (

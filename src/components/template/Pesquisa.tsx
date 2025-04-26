@@ -1,9 +1,9 @@
-// src/components/pesquisa/Pesquisa.tsx
+
 'use client';
 
 import Filter from "./Filter";
 import Input from "./Input";
-import { PesquisaProps } from "@/types/pesquisa"; // Importando a tipagem
+import { PesquisaProps } from "@/types/pesquisa"; 
 
 export default function Pesquisa({ onSearch, onFilterChange }: PesquisaProps) {
     return (

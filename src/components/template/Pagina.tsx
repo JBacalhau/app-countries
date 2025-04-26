@@ -1,10 +1,10 @@
-// src/components/template/Pagina.tsx
+
 'use client';
 
 import { useEffect } from "react";
 import Cabecalho from "./Cabecalho";
 import { useTheme } from "@/hooks/useTheme";
-import { PaginaProps } from "@/types/Pagina"; // Certifique-se de que está importando a interface correta
+import { PaginaProps } from "@/types/Pagina";
 
 const Pagina: React.FC<PaginaProps> = ({ children, className, resetFilters }) => {
     const { isDarkMode } = useTheme();

@@ -2,11 +2,11 @@
 
 import Btn from './Btn';
 import Logo from './Logo';
-import { useTheme } from '@/hooks/useTheme'; // Importando o hook personalizado
-import { CabecalhoProps } from '@/types/Cabecalho'; // Importando a tipagem
+import { useTheme } from '@/hooks/useTheme'; 
+import { CabecalhoProps } from '@/types/Cabecalho'; 
 
 export default function Cabecalho({ resetFilters }: CabecalhoProps) {
-    const { isDarkMode } = useTheme(); // Obtendo o estado do tema (dark ou light)
+    const { isDarkMode } = useTheme(); // tema (dark ou light)
 
     return (
         <header

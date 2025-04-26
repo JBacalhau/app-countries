@@ -1,18 +1,18 @@
 'use client';
 import { useState } from "react";
 import { IconChevronDown } from "@tabler/icons-react";
-import { useTheme } from "@/hooks/useTheme"; // Hook para acessar o tema
-import { FilterProps } from "@/types/filter"; // Importando a tipagem
+import { useTheme } from "@/hooks/useTheme"; 
+import { FilterProps } from "@/types/filter"; 
 
-// Componente Filter com tipagem
+// Component Filter
 export default function Filter({ onFilterChange }: FilterProps) {
-    // Estado local para controlar a abertura do filtro
+    
     const [openFilter, setOpenFilter] = useState<boolean>(false); 
 
-    // Acesso ao tema atual
+    
     const { isDarkMode } = useTheme();
 
-    // Função chamada ao clicar em um filtro de região
+    
     const handleFilterClick = (region: string): void => {
         onFilterChange(region);
         setOpenFilter(false);

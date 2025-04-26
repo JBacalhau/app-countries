@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ resetFilters }) => {
   const { isDarkMode } = useTheme();
 
   const handleBack = () => {
-    resetFilters();  // Chama resetFilters antes de voltar para a página anterior
+    resetFilters(); 
     router.back();
   };
 
@@ -80,7 +80,7 @@ const Card: FC<CardProps> = ({ resetFilters }) => {
     >
       <div className="flex mt-8 mb-20">
         <button
-          onClick={handleBack}  // Chama a função handleBack que inclui resetFilters
+          onClick={handleBack}  // resetFilters
           className={`flex mt-28 items-center gap-x-[6px] py-[6px] px-6 rounded shadow-[0px_0px_6px_rgba(0,0,0,0.28)] ${isDarkMode ? "bg-gray-700 text-white" : "bg-white text-black"}`}
         >
           <IconArrowNarrowLeft stroke={2} />

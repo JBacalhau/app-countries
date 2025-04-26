@@ -1,19 +1,19 @@
 'use client';
 import { IconSearch } from "@tabler/icons-react";
 import { useTheme } from "@/hooks/useTheme";
-import { InputProps } from "@/types/Input"; // Importando a tipagem para as props
+import { InputProps } from "@/types/Input"; 
 
 export default function Input({ onSearch }: InputProps) {
-    const { isDarkMode } = useTheme(); // Obtendo o tema atual (dark ou light mode)
+    const { isDarkMode } = useTheme(); // (dark ou light mode)
 
     return (
         <form
             autoComplete="off"
             className="relative"
             onSubmit={(e) => {
-                e.preventDefault(); // Previne o comportamento padrão de envio do formulário
+                e.preventDefault(); 
                 const searchTerm = (e.target as HTMLFormElement).elements.namedItem("Country") as HTMLInputElement;
-                onSearch(searchTerm.value); // Chama a função onSearch com o valor inserido no campo de busca
+                onSearch(searchTerm.value); 
             }}
         >
             <IconSearch
